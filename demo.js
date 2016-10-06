@@ -3,9 +3,10 @@
 let rgf = require('./');
 let options = {
 	//name: 'Roboto',
-	category: 'sans-serif',
-	varient: 'italic',
-	weight: '400'
+	category: 'handwriting',
+	variant: 'italic',
+	weight: '500',
+	items: 3,
 };
 
 // http://mono.software/2014/07/07/Creating-NodeJS-modules-with-both-promise-and-callback-API-support-using-Q/
