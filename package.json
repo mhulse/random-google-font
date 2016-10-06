@@ -1,0 +1,14 @@
+{
+  "name": "random-google-font",
+  "version": "0.1.0",
+  "description": "Node module (work in progress) that returns a random Google font.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "google-fonts-complete": "^1",
+    "underscore": "^1",
+    "q": "^1"
+  }
+}
