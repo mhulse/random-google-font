@@ -25,9 +25,16 @@ font.get({
 
 **Note:** This module utilizes [@jonathantneal / google-fonts-complete](https://github.com/jonathantneal/google-fonts-complete).
 
+## Dev notes
+
 ```bash
 # Run the demo:
 $ node ./demo.js
+# If not already, login:
+$ npm adduser
+# Bump version number in `package.json` …
+# … and publish on npm:
+$ npm publish
 ```
 
 ---
