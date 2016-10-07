@@ -1,6 +1,6 @@
 {
   "name": "random-google-font",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Node module that returns random Google font source file URLs.",
   "main": "index.js",
   "scripts": {
