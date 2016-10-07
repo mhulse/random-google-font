@@ -1,11 +1,16 @@
 {
   "name": "random-google-font",
   "version": "0.1.0",
-  "description": "Node module (work in progress) that returns a random Google font.",
+  "description": "Node module that returns random Google font source file URLs.",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mhulse/random-google-font.git"
+  },
+  "bugs": "https://github.com/mhulse/random-google-font/issues",
   "dependencies": {
     "google-fonts-complete": "^1",
     "underscore": "^1",

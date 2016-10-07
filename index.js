@@ -117,7 +117,11 @@ function randomGoogleFontSync() {
 	return getFont(arguments);
 }
 
-module.exports = {
-	get: randomGoogleFont,
-	getSync: randomGoogleFontSync,
-};
+if (typeof module !== 'undefined') {
+	
+	module.exports = {
+		get: randomGoogleFont,
+		getSync: randomGoogleFontSync,
+	};
+	
+}
