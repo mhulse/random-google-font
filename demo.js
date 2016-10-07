@@ -5,7 +5,7 @@ let options = {
 	//name: 'Roboto',
 	category: 'handwriting',
 	variant: 'italic',
-	weight: '500',
+	weight: '400',
 	items: 3,
 };
 
@@ -13,6 +13,7 @@ let options = {
 let font = rgf(options)
 	.then(function(result) {
 		console.log(result);
+		console.log('--------------------------------------------------');
 	})
 	.fail(function (error) {
 		console.log(error);

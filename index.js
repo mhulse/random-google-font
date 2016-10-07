@@ -9,22 +9,63 @@ function getFont(options) {
 	
 	let result = json;
 	
-	//console.log(options.variant);
+	if (options.category) {
+		
+		// Filter objects down to desired category:
+		result = _(result).filter({
+			category: options.category
+		});
+		
+	} else {
+		
+		result = _(result).filter('category');
+		
+	}
 	
-	result = (options.category.length ? _(result).filter({
-		category: options.category
-	}) : result);
+	if (options.variant) {
+		
+		// Filter objects down to desired variant:
+		result = _(result).filter(function(value) {
+			
+			return !!value.variants[options.variant];
+			
+		});
+		
+		// Remove everything but desired variant:
+		result = _(result).map(function(value) {
+			
+			return _(value.variants).pick(options.variant);
+			
+		});
+		
+	} else {
+		
+		// All variants:
+		result = _(result).pluck('variants');
+		
+	}
 	
-	result = (options.variant.length ? _(result).filter(function(value) {
-		return value.variants[options.variant];
-	}) : result);
+	result = _.flatten(_.map(result, _.values));
 	
-	result = (options.weight.length ? _(result).filter(function(value) {
-		console.log(value);
-		return value[options.weight];
-	}) : result);
+	if (options.weight) {
+			
+		result = _(result).filter(function(value) {
+			
+			return !!value[options.weight];
+			
+		});
+		
+		result = _(result).map(function(value) {
+			
+			return _(value).pick(options.weight);
+			
+		});
+		
+	}
 	
-	//result = _(result).sample(options.items);
+	result = _.flatten(_.map(result, _.values));
+	
+	result = _(result).sample(options.items);
 	
 	return result;
 	
