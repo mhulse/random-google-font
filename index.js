@@ -4,10 +4,19 @@ let json = require('google-fonts-complete');
 let _ = require('underscore');
 let Q = require('q');
 let noop = (function() {});
+let defaults = {
+	name: '',
+	category: '',
+	variant: '',
+	weight: '',
+	items: 1,
+};
 
 function getFont(options) {
 	
 	let result = json;
+	
+	options = _.defaults(options, defaults);
 	
 	if (options.name) {
 		
@@ -85,19 +94,16 @@ function getFont(options) {
 	
 }
 
-function randomGoogleFont({
-		name = '',
-		category = '',
-		variant = '',
-		weight = '',
-		items = 1,
-}, callback = noop) {
+function randomGoogleFont(
+	options = {},
+	callback = noop
+) {
 	
 	let deferred = Q.defer();
 		
 	deferred.promise.nodeify(callback);
 	
-	let font = getFont(arguments[0]);
+	let font = getFont.call(this, options);
 		
 	if (_.isEmpty(font)) {
 		
@@ -113,8 +119,10 @@ function randomGoogleFont({
 	
 }
 
-function randomGoogleFontSync() {
-	return getFont(arguments);
+function randomGoogleFontSync(options = {}) {
+	
+	return getFont.call(this, options);
+	
 }
 
 if (typeof module !== 'undefined') {

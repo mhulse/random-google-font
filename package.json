@@ -1,16 +1,37 @@
 {
   "name": "random-google-font",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Node module that returns random Google font source file URLs.",
+  "keywords": [
+    "complete",
+    "eot",
+    "families",
+    "family",
+    "fonts",
+    "google",
+    "random",
+    "source",
+    "styles",
+    "ttf",
+    "variants",
+    "web",
+    "weights",
+    "woff"
+  ],
+  "author": "Michael Hulse <me@mky.io> (http://mky.io)",
+  "license": "Apache-2.0",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
   },
+  "homepage": "https://github.com/mhulse/random-google-font",
+	"bugs": {
+		"url": "https://github.com/mhulse/random-google-font/issues"
+	},
   "repository": {
     "type": "git",
     "url": "https://github.com/mhulse/random-google-font.git"
   },
-  "bugs": "https://github.com/mhulse/random-google-font/issues",
   "dependencies": {
     "google-fonts-complete": "^1",
     "underscore": "^1",

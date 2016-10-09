@@ -21,6 +21,21 @@ font.get({
 
 … use as a `Promise` or with a callback; there’s also a `getSync(…)` method.
 
+Returns an array of objects:
+
+```js
+[{
+    local: ['\'Lato Hairline Italic\'', '\'Lato-HairlineItalic\''],
+    url: {
+        eot: 'http://fonts.gstatic.com/s/lato/v11/81DMwqUqq96weubmVpbDyvesZW2xOQ-xsNqO47m55DA.eot',
+        svg: 'http://fonts.gstatic.com/l/font?kit=Hu89JyBnFisiVNJ1Re4R8PesZW2xOQ-xsNqO47m55DA&skey=3404b88e33a27f67#Lato',
+        ttf: 'http://fonts.gstatic.com/s/lato/v11/gc5ZVKiLNkRdGlU3GaSVBfesZW2xOQ-xsNqO47m55DA.ttf',
+        woff: 'http://fonts.gstatic.com/s/lato/v11/CggrdU0t5c42NcNxN-VM3_esZW2xOQ-xsNqO47m55DA.woff',
+        woff2: 'http://fonts.gstatic.com/s/lato/v11/9TBVFLzQ3GUZLG8FZ4yrEfesZW2xOQ-xsNqO47m55DA.woff2'
+    }
+}]
+```
+
 [Check the demo](demo.js) for usage examples.
 
 **Note:** This module utilizes [@jonathantneal / google-fonts-complete](https://github.com/jonathantneal/google-fonts-complete).

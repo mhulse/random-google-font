@@ -6,7 +6,7 @@ let options = {
 	//category: 'monospace', // If name is specified, this option is ignored.
 	variant: 'italic',
 	weight: '100',
-	items: 2,
+	//items: 2,
 };
 
 // http://mono.software/2014/07/07/Creating-NodeJS-modules-with-both-promise-and-callback-API-support-using-Q/
@@ -31,7 +31,7 @@ font.get(options, function(error, result) {
 // Just proving that it’s sync:
 console.log('before');
 countdown();
-console.log(font.getSync(options));
+console.log(font.getSync());
 countdown();
 console.log('after');
 console.log('--------------------------------------------------');
